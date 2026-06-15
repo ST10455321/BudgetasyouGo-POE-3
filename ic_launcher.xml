@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categoryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_gradient_card"
+    tools:context=".category">
+
+    <!-- Back Icon -->
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow_back"
+        android:contentDescription="Back"
+        android:onClick="back_homes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Category"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/backIcon"
+        app:layout_constraintBottom_toBottomOf="@id/backIcon" />
+    <TextView
+        android:id="@+id/totalSpendingView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Budgeted: R 0.00"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/titleText"
+        app:layout_constraintBottom_toBottomOf="@id/titleText"
+        />
+
+    <!-- CardView wrapping form -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/formCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/totalSpendingView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Category Name -->
+            <EditText
+                android:id="@+id/categoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category Name"
+                android:textColor="@color/white"
+                android:textColorHint="#7A7676" />
+            <!-- Budget Money -->
+            <EditText
+                android:id="@+id/categoryBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Budget Money"
+                android:inputType="numberDecimal"
+                android:textColor="@color/white"
+                android:textColorHint="#7A7676"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Category Description -->
+            <EditText
+                android:id="@+id/categoryDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category Description"
+                android:minLines="3"
+                android:inputType="textMultiLine"
+                android:textColorHint="#7A7676"
+                android:layout_marginTop="16dp" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveCategoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Category"
+                app:tint="#FB0000"
+                android:background="#000000"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Graph View (MPAndroidChart) -->
+    <!-- Scrollable Chart Container -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/formCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:layout_gravity="center"
+                >
+
+                <!-- BarChart -->
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/categoryChart"
+                    android:layout_width="600dp"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+
+                <!-- PieChart -->
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/categoryPieChart"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
