@@ -50,7 +50,7 @@ How to Run the App
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/St10455321/BudgetasYouGO-POE-3
+   https://github.com/St10455321/BudgetasYouGO-POE-3
    ```
 
 2. Open in Android Studio
