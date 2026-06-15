@@ -29,12 +29,14 @@ Screenshots
 
 > _Screenshots will be added here_
 
-| Dashboard | Add Transaction | Visual chart |
-|:---------:||:-------:| |:-------:|
-| <img width="157" height="359" alt="Screenshot 2026-06-15 152508" src="https://github.com/user-attachments/assets/52ada84b-8a1e-498c-af43-f8d2422b4719" />
- |<img width="165" height="356" alt="Screenshot 2026-06-15 152534" src="https://github.com/user-attachments/assets/75fa7f9f-979b-4321-b2c8-26595a90665b" />
- | <img width="164" height="360" alt="Screenshot 2026-06-15 152602" src="https://github.com/user-attachments/assets/22e01511-c80c-40c9-bd20-9e941261a33b" />
+| Transactions | Visual chart | Dashboard |
+|:---------:|:---------------:|:-------:|
+| <img width="157" height="359" alt="Screenshot 2026-06-15 152508" src="https://github.com/user-attachments/assets/9c0132f9-518a-47bf-aa0a-a5bf8c0ee88b" />
+ |<img width="164" height="360" alt="Screenshot 2026-06-15 152602" src="https://github.com/user-attachments/assets/08a4de57-3651-44fe-9b8e-6ccc45262517" />
+ | <img width="181" height="361" alt="Screenshot 2026-06-15 152436" src="https://github.com/user-attachments/assets/a241f38e-b866-41be-9790-173f63f5768d" />
  |
+
+
 
 ---
 
