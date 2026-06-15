@@ -42,7 +42,7 @@ Screenshots
 
 Video Presentation
 
-Video link will be added here
+https://youtube.com/shorts/z-t_td3gq4A?si=lo_F9kvMViOgpOdp
 
 ---
 
@@ -50,7 +50,7 @@ How to Run the App
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/YOUR_USERNAME/BudgetasYouGO.git
+   git clone https://github.com/St10455321/BudgetasYouGO-POE-3
    ```
 
 2. Open in Android Studio
